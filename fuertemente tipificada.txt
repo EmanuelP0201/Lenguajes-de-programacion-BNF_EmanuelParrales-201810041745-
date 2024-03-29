@@ -32,11 +32,11 @@
 
 <Asignacion> ::= <Identificador> "=" <Expresion>
 
-<SiStatement> ::= "si" "(" <Condicion> ")" "{" <CuerpoFuncion> "}" <SinoStatement>?
+<SiDeclaración> ::= "si" "(" <Condicion> ")" "{" <CuerpoFuncion> "}" <SinoStatement>?
 
-<SinoStatement> ::= "sino" "{" <CuerpoFuncion> "}"
+<SinoDeclaración> ::= "sino" "{" <CuerpoFuncion> "}"
 
-<WhileLoop> ::= "mientras" "(" <Condicion> ")" "{" <CuerpoFuncion> "}"
+<mientrasLoop> ::= "mientras" "(" <Condicion> ")" "{" <CuerpoFuncion> "}"
 
 <Condicion> ::= <Operando> <OperadorCondicion> <Operando>
 
