@@ -1,0 +1,55 @@
+<MiLenguaje> ::= <Declaracion>+
+
+<Declaracion> ::= <Variable> ";" | <Funcion> | <Estructura>
+
+<Variable> ::= <Tipo> <Identificador> "=" <Expresion>
+
+<Tipo> ::= "entero" | "flotante" | "booleano" | "cadena"
+
+<Expresion> ::= <Operando> <Operador> <Operando>
+
+<Operando> ::= <Identificador> | <Valor>
+
+<Operador> ::= "+" | "-" | "*" | "/"
+
+<Funcion> ::= <TipoRetorno> <IdentificadorFuncion> "(" <ListaParametros>? ")" "{" <CuerpoFuncion> "}"
+
+<TipoRetorno> ::= <Tipo> | "nulo"
+
+<IdentificadorFuncion> ::= <Identificador>
+
+<ListaParametros> ::= <Parametro> ("," <Parametro>)*
+
+<Parametro> ::= <Tipo> <Identificador>
+
+<CuerpoFuncion> ::= <Declaracion>* <Instruccion>*
+
+<Estructura> ::= "estructura" <NombreEstructura> "{" <Declaracion>* "}"
+
+<NombreEstructura> ::= <Identificador>
+
+<Instruccion> ::= <Asignacion> ";" | <IfStatement> | <WhileLoop> | <LlamadaFuncion> ";"
+
+<Asignacion> ::= <Identificador> "=" <Expresion>
+
+<IfStatement> ::= "si" "(" <Condicion> ")" "{" <CuerpoFuncion> "}" <ElseStatement>?
+
+<ElseStatement> ::= "sino" "{" <CuerpoFuncion> "}"
+
+<WhileLoop> ::= "mientras" "(" <Condicion> ")" "{" <CuerpoFuncion> "}"
+
+<Condicion> ::= <Operando> <OperadorCondicion> <Operando>
+
+<OperadorCondicion> ::= "==" | "!=" | "<" | ">" | "<=" | ">="
+
+<LlamadaFuncion> ::= <IdentificadorFuncion> "(" <Argumentos>? ")"
+
+<Argumentos> ::= <Expresion> ("," <Expresion>)*
+
+<Identificador> ::= <LetraInicial> (<Letra> | <Digito>)*
+
+<LetraInicial> ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" | "_"
+
+<Letra> ::= <LetraInicial>
+
+<Digito> ::= "0" | "1" | ... | "9"
